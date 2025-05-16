@@ -1,0 +1,33 @@
+/* Reset & Base */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:Arial, sans-serif; background:#111; color:#eee; }
+
+/* Header */
+.site-header { background:#222; position:fixed; top:0; width:100%; z-index:100; }
+.site-header .container { display:flex; align-items:center; justify-content:space-between; padding:1rem; }
+.main-nav ul { list-style:none; display:flex; gap:1rem; }
+.main-nav a { color:#eee; text-decoration:none; }
+.auth-links a { color:#aaa; font-size:.9rem; }
+
+/* Hero */
+.hero { height:60vh; background-size:cover; background-position:center; display:flex; align-items:center; }
+.hero .container { text-align:center; color:#fff; }
+.btn { padding:.75rem 1.5rem; text-decoration:none; border-radius:4px; }
+.btn-primary { background:#E8541C; color:#fff; }
+.btn-secondary { background:transparent; border:2px solid #E8541C; color:#E8541C; }
+
+/* Modpack Cards */
+.cards-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1rem; margin-top:1rem; }
+.card { background:#333; border-radius:8px; overflow:hidden; text-align:center; padding:1rem; }
+.card img { width:100%; height:auto; }
+.btn-install { display:inline-block; margin-top:.5rem; background:#E8541C; color:#fff; padding:.5rem 1rem; border-radius:4px; }
+
+/* Sections */
+section { padding:4rem 0; }
+.features ul { list-style:disc inside; }
+.gallery .grid { display:flex; gap:1rem; }
+.gallery img { flex:1; border-radius:8px; }
+
+/* Footer */
+.site-footer { background:#222; text-align:center; padding:2rem 0; }
+.footer-nav a { color:#aaa; margin:0 .5rem; text-decoration:none; }

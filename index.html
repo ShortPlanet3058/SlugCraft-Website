@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Legends of Slugterra – Slugcraft Modpack</title>
+  <link rel="icon" href="SlugCraft-Icon.png" />
+  <style>
+    /* Base Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #f0f0f0; background: #0a0a0a; }
+    a { text-decoration: none; }
+
+    /* Container */
+    .container { width: 90%; max-width: 1200px; margin: auto; }
+
+    /* Header */
+    header { background: #111; position: fixed; top: 0; width: 100%; z-index: 10; box-shadow: 0 2px 5px rgba(0,0,0,0.7); }
+    header .container { display: flex; align-items: center; justify-content: space-between; padding: 1rem 0; }
+    .logo { font-size: 1.8rem; font-weight: bold; color: #8cff00; }
+    nav ul { list-style: none; display: flex; gap: 1.5rem; }
+    nav a { color: #ddd; font-weight: 500; transition: color 0.3s; }
+    nav a:hover { color: #8cff00; }
+
+    /* Hero */
+    .hero { height: 70vh; display: flex; align-items: center; justify-content: center;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('SlugCraft-Icon.png') center/cover no-repeat;
+      margin-top: 70px;
+      text-align: center;
+    }
+    .hero h2 { font-size: 2.5rem; margin-bottom: 1rem; }
+    .hero p { font-size: 1.2rem; margin-bottom: 2rem; color: #ccc; }
+    .btn { padding: 0.8rem 2rem; border-radius: 4px; font-weight: 600; transition: background 0.3s, transform 0.3s; display: inline-block; }
+    .btn-primary { background: #8cff00; color: #111; border: none; }
+    .btn-primary:hover { background: #6acb00; transform: translateY(-2px); }
+
+    /* Seasons */
+    .seasons { padding: 4rem 0; background: #111; }
+    .seasons h2 { text-align: center; font-size: 2rem; margin-bottom: 2rem; }
+    .season { background: #1a1a1a; padding: 1.5rem; margin: 1rem 0; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.7); }
+    .season h3 { font-size: 1.5rem; color: #8cff00; margin-bottom: 0.5rem; }
+    .season ul { list-style: disc inside; color: #ccc; font-size: 0.95rem; }
+
+    /* Modpacks */
+    section.modpacks { padding: 4rem 0; }
+    .modpacks h2 { font-size: 2rem; margin-bottom: 1rem; }
+    .search-bar input { width: 100%; max-width: 300px; padding: 0.5rem 1rem; border: 1px solid #333; border-radius: 20px; background: #111; color: #eee; }
+    .cards-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap: 1.5rem; margin-top: 2rem; }
+    .card { background: #1a1a1a; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.7); text-align: center; padding-bottom: 1rem; }
+    .card img { width: 100%; height: 150px; object-fit: cover; }
+    .card h3 { margin: 1rem 0 0.5rem; font-size: 1.2rem; }
+    .card p { color: #bbb; font-size: 0.9rem; }
+    .btn-install { margin-top: 1rem; background: transparent; color: #00caff;border: #00caff; padding: 0.6rem 1.4rem; border-radius: 4px; font-weight: 600; display: inline-block; transition: background 0.3s; }
+    .btn-install:hover { background: #008bb3; }
+
+    /* Features */
+    section.features { padding: 4rem 0; }
+    section.features h2 { font-size: 2rem; margin-bottom: 1rem; }
+    .features ul { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 1rem; }
+    .features li { background: #1a1a1a; padding: 1rem; border-radius: 6px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.5); color: #ccc; }
+
+    /* Gallery */
+    section.gallery { padding: 4rem 0; }
+    section.gallery .grid { display: flex; flex-wrap: wrap; gap: 1rem; }
+    section.gallery img { flex: 1 1 calc(33% - 1rem); border-radius: 8px; height: 200px; object-fit: cover; box-shadow: 0 4px 6px rgba(0,0,0,0.5); }
+
+    /* Download CTA */
+    .download-cta { background: #111; text-align: center; padding: 4rem 0; }
+    .download-cta h2 { font-size: 2rem; margin-bottom: 1rem; }
+
+    /* Footer */
+    footer { background: #111; padding: 2rem 0; text-align: center; }
+    .footer-nav a { color: #888; margin: 0 0.5rem; font-size: 0.9rem; transition: color 0.3s; }
+    .footer-nav a:hover { color: #8cff00; }
+    footer p { margin-top: 1rem; color: #555; font-size: 0.8rem; }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1 class="logo">Slugcraft</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#modpacks">Modpacks</a></li>
+          <li><a href="#seasons">Seasons</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#screenshots">Screenshots</a></li>
+          <li><a href="#download">Download</a></li>
+          <li><a href="#community">Community</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h2>Enter the Next Chapter of Slugterra</h2>
+      <p>SlugCraft is seasonal: each major version brings a unique theme, new mods, and fresh adventures.</p>
+      <a class="btn btn-primary" href="#download">Get SlugCraft</a>
+    </div>
+  </section>
+
+  <!-- Seasons -->
+  <section id="seasons" class="seasons container">
+    <h2>SlugCraft Seasons</h2>
+    <!-- V4 -->
+    <div class="season">
+      <h3>V4 – Season of the Deep Realms</h3>
+      <ul>
+        <li>Cobblemon – Pokémon-style creatures in Slugterra.</li>
+        <li>Tinkers’ Construct – Custom tools & weapons.</li>
+        <li>Immersive Engineering – Realistic power networks.</li>
+        <li>Twilight Forest – Enchanted bosses & structures.</li>
+        <li>Secret Underground Dimension – Discover hidden powers.</li>
+      </ul>
+    </div>
+    <!-- V3 -->
+    <div class="season">
+      <h3>V3 – The Tech Overdrive</h3>
+      <ul>
+        <li>Create & Applied Energistics 2 – Factory automation.</li>
+        <li>Wireless Tech – Manage storage & power remotely.</li>
+        <li>Advanced machinery integrated into Slugterra.</li>
+      </ul>
+    </div>
+    <!-- V2 -->
+    <div class="season">
+      <h3>V2 – Slugs and Magic</h3>
+      <ul>
+        <li>Ars Nouveau – Spellcasting & magical creatures.</li>
+        <li>Enhanced exploration – New biomes & dungeons.</li>
+      </ul>
+    </div>
+    <!-- V1 -->
+    <div class="season">
+      <h3>V1 – The Original Underground</h3>
+      <ul>
+        <li>Raw slug-focused survival experience.</li>
+        <li>Lightweight enhancements for core gameplay.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Modpacks -->
+  <section id="modpacks" class="modpacks container">
+    <h2>Featured Modpack</h2>
+    <div class="cards-grid">
+      <div class="card">
+        <img src="SlugCraft-Icon2.png" alt="Slug Battle" />
+        <h3>Legends of Slugterra</h3>
+        <p>Forge 1.20.1 • 1K installs • Updated May 8, 2025</p>
+        <a class="btn-install" href="https://www.curseforge.com/minecraft/modpacks/legends-of-slugterra-slugcraft" target="_blank">Download</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="features container">
+    <h2>Core Features</h2>
+    <ul>
+      <li>Easy One-Click Install - via CurseForge launcher.</li>
+      <li>Slug Battles – Train, evolve, & battle slugs in PvE & PvP.</li>
+      <li>Adventure Tools – Backpacks, teleportation, custom gear.</li>
+      <li>Multiplayer-Ready – Optimized for cooperative servers.</li>
+      <li>Optional Visual Mods – Shaders, minimaps, UI enhancements.</li>
+      <li>Vibrant Community - Active Discord and in-game forums.</li>
+      <li>Community-Driven Development – Suggest, vote on and shape next season’s mods.</li>
+    </ul>
+  </section>
+
+  <!-- Screenshots -->
+  <section id="screenshots" class="gallery container">
+    <h2>Images</h2>
+    <div class="grid">
+      <img src="SlugTaming.png" alt="Slugterra Caves" />
+      <img src="" alt="More images soon" />
+    </div>
+  </section>
+
+  <!-- Download -->
+  <section id="download" class="download-cta">
+    <div class="container">
+      <h2>Download on CurseForge</h2>
+      <a class="btn btn-primary" href="https://www.curseforge.com/minecraft/modpacks/legends-of-slugterra-slugcraft">Download Now</a>
+      <a class="btn btn-install" href="https://www.mediafire.com/file/7xjzcqq1ywvv8kd/SlugCraft.zip/file">Or the mod zipfile</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="community">
+    <div class="container">
+      <p>&copy; 2025 Slugcraft Modpack. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
